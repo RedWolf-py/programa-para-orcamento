@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="icon" type="img/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/img/site.webmanifest">
+    <script src="https://use.fontawesome.com/b855ad64bb.js"></script>
+    <title>Ale Vidros</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>alert('O Progama foi Atualizado, agora pode salvar os seus Orçamentos em pdf no seu computador, ou imprimir uma cópia pro seu cliente !')</script>
+<body>
+  <div class="mover">
+    <div class="menu">
+      <div class="btn1"></div>
+      <div class="btn2">Menu</div>
+      <div class="btn3"></div>
+    </div>
+    <nav class="submenu">
+      <div class="spam">
+        <span>Fechar</span>
+      </div>
+      <div class="listadiv">
+        <div class="cor selected">
+          <ul class="iconBx active" data-id="content1">
+            <li>Inicio</li>
+          </ul>
+        </div>
+        <div class="cor">
+          <ul class="iconBx active" data-id="content2">
+            <li>Meus Orçamentos</li>
+          </ul>
+        </div>
+        <div class="cor">
+          <ul class="iconBx active" data-id="content3">
+            <li>Tipos de Ferragens</li>
+          </ul>
+        </div>
+        <div class="cor">
+          <ul class="iconBx active" data-id="content4">
+            <li>Projetos</li>
+          </ul>
+        </div>
+
+      </div>
+      <div class="lista">
+        <ul class="iconBx active" data-id="content1">
+          <li>Inicio</li>
+        </ul>
+        <ul class="iconBx active" data-id="content2">
+          <li>Meus Orçamentos</li>
+        </ul>
+        <ul class="iconBx active" data-id="content3">
+          <li>Tipos de Ferragens</li>
+        </ul>
+        <ul class="iconBx active" data-id="content4">
+          <li>Projetos</li>
+        </ul>
+
+        <div class="social-media2">
+          <li><a href="https://www.instagram.com/snoop5902/"><i class="fab fa-instagram" id="is"></i></a></li>
+          <li><a href="https://www.facebook.com/alessandro.amaral.33" target="-blank" rel="esternal"><i
+                class="fab fa-facebook-f" id="fa"></i></a></li>
+          <li><a href="https://api.whatsapp.com/send?phone=5573988117129" target="-blank" rel="external"><i
+                class="fab fa-whatsapp" id="wa"></i></a></li>
+        </div>
+    </nav>
+  </div>
+
+  <section>
+    <div class="img-bg">
+      <img src="/img/bg.jpg">
+      <div class="erro">
+      </div>
+      <div class="contentBx active" id="content1">
+        <div class="head"><label>Modelo:</label> <select name="vidro" class="modelo2" onchange="ModeloVi()">
+            <option value="" selected>Tipo</option>
+            <option value="portaatrazparede">PortaAtrazParede</option>
+            <option value="portaCorrervao">PortaCorrerVao</option>
+            <option value="portaPivoltante">Porta Pivotante</option>
+            <option value="Janela">Janela</option>
+            <option value="bascula">Bascula</option>
+            <option value="pivotante">Pivotante</option>
+            <option value="deslisanteporta">PortaDeslizante</option>
+            <option value="versatikporta">PortaVersatik</option>
+          </select>
+        </div>
+        <div class="head2"> <label>Espessura:</label> <select name="vidro" class="espessura">
+            <option value="" selected>Em mm</option>
+            <option value="4mm">4mm</option>
+            <option value="6mm">6mm</option>
+            <option value="8mm">8mm</option>
+            <option value="10mm">10mm</option>
+          </select> </div>
+        <div class="pcento"><label>Mão De Obra:</label>
+          <select name="porcentagens" class="porcento" onchange="porcentoSo()">
+            <option value="0" selected>0%</option>
+            <option value="10">10%</option>
+            <option value="20">20%</option>
+            <option value="30">30%</option>
+            <option value="40">40%</option>
+            <option value="50">50%</option>
+            <option value="60">60%</option>
+            <option value="70">70%</option>
+            <option value="80">80%</option>
+            <option value="90">90%</option>
+            <option value="100">100%</option>
+          </select>
+        </div>
+        <main>
+          <div class="container">
+            <div class="card">
+              <h1>Orçamento De Vidros</h1>
+
+              <div class="input"> <label> Nome Do Cliente:</label> <input type="text" class='cliente'> </div>
+              <div class="input"> <label>Preço do M<sup>2</sup>:</label> <input type="text" class='preco'> </div>
+              <div class="input"> <label>Altura em Cm:</label> <input type="text" class='altura'> </div>
+              <div class="input"> <label>Largura em Cm:</label> <input type="text" class='largura'> </div>
+              <div class="input"> <label>Ferragens R$:</label> <input type="text" class='ferragen'> </div>
+              <div class="input"> <label>Material R$:</label> <input type="text" class='material'></div>
+              <div class="botao">
+                <button class='calcular'>Calcular</button> <button class='salvarorcamento'>Salvar Orçanento</button>
+              </div>
+
+              <div class="resultado"></div>
+              <div class="resultadosomar"></div>
+              <div class="resultadofinal"></div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="result4">
+      <div class="result6"></div>
+      <div class="result7"></div>
+    </div>
+    <div id="result5">
+      <div class="result12"></div>
+      <input class="entrarP" type="text" />
+      <div class="pcento2"><label>Calcular Valores:</label>
+        <select name="porcentagens2" class="porcento2" onchange="Px()">
+          <option value="0" selected>0%</option>
+          <option value="10">10%</option>
+          <option value="20">20%</option>
+          <option value="30">30%</option>
+          <option value="40">40%</option>
+          <option value="50">50%</option>
+          <option value="60">60%</option>
+          <option value="70">70%</option>
+          <option value="80">80%</option>
+          <option value="90">90%</option>
+          <option value="100">100%</option>
+        </select>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <p>
+          Copyright &copy; 2022, Alessandro.A.S - Todos os direitos reservados
+        </p>
+        <div class="social-list">
+          <ul>
+            <li class="li"><a href="https://www.facebook.com/alessandro.amaral.33" target="-blank" rel="external"><i
+                  class="fab fa-facebook-f" id="f"></i></a></li>
+            <li class="li"><a href="https://www.instagram.com/snoop5902/"><i class="fab fa-instagram" id="i"></i></a>
+            </li>
+            <li class="li"><a href="https://api.whatsapp.com/send?phone=5573988117129" target="-blank" rel="external"><i
+                  class="fab fa-whatsapp" id="w"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="portaabrir">
+        <img src="/imgV/pabrir.jpg" />
+      </div>
+      <div class="portacorreratraz">
+        <img src="/imgV/correratras.jpg" />
+      </div>
+      <div class="porta4">
+        <img src="/imgV/porta4.jpg" />
+      </div>
+      <div class="janelas">
+        <img src="/imgV/janela4.jpg" />
+      </div>
+      <div class="pivoltanteX">
+        <img src="/imgV/pivoltante.jpg" />
+      </div>
+      <div class="basculaX">
+        <img src="/imgV/bascula.jpg" />
+      </div>
+      <div class="deslisanteporta">
+        <img src="/imgV/deslisante.jpg" />
+      </div>
+      <div class="versatikporta">
+        <img src="/imgV/Versatik.jpg" />
+      </div>
+      <div class="logo">
+        <img src="/imgV/vidros.jpg" />
+      </div>
+
+    </footer>
+    <div class="contentBx" id="content2">
+      <div class="contente2">
+        <div id="result">
+          <P id='viadono'>Está Cópia, Fica no Seu Computador !</P>
+          <P id='viacliente'>Está Cópia, Pode Imprimir Para o Cliente !</P>
+          <div id="result2">
+
+          </div>
+          <div id="result3">
+
+          </div>
+
+          <div class="imprimirBt">
+            <input id="imprimir" type="button" value="SALVAR" onclick="gerarPdf()">
+          </div>
+          <div class="imprimirBts">
+
+            <input id="imprimirSalvar" type="button" value="IMPRIMIR" onclick="gerarPdf()">
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="contentBx" id="content3">
+      <div class="contente3">
+        <div class="cont3">
+          <div class="foto">
+            <img src="/ferragens/portaP(1).png" />
+            <h2>Porta Pivoltante</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/portaP(2).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/correrVA(1).png" />
+            <h2>Porta 2 folhas</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/correrVA(2).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/portaVV(1).png" />
+            <h2>Porta 4 Folhas</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/portaVV(2).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+
+          <div class="foto">
+            <img src="/ferragens/jumbo(1).png" />
+            <h2>Porta Pivoltante Jumbo</h2>
+          </div>
+          <div class="foto">
+            <img src="C:\Users\teste\Desktop\orcaM\orcamento\img\portajumbo.jpg" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/jumbo(3).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/jumbo(4).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/jumbo(5).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+
+
+          <div class="foto">
+            <img src="/ferragens/fechoFA(1).png" />
+            <h2>Janela 2 Folhas</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/fechoFA(2).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/fechoVV(1).png" />
+            <h2>Janela 4 Folhas</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/fechoVV(2).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/bascula(1).png" />
+            <h2>Bascula</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/bascula(2).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+
+          <div class="foto">
+            <img src="/ferragens/Jpivoltante(1).png" />
+            <h2>Janela Pivoltante</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/Jpivoltante(1).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/ferragensfixo(1).png" />
+            <h2>Ferragens Fixo Meio</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/ferragensfixo(2).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/ferragensfixo(3).png" />
+            <h2>Ferragens Fixo Canto</h2>
+          </div>
+
+          <div class="foto">
+            <img src="/ferragens/ferragensfixo(4).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/puchador (1).png" />
+            <h2>Puxador</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/puchador (2).png" />
+            <h2>Tipo das Ferragens</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/maoamigaVR.jpg" />
+            <h2>Mão Amiga</h2>
+          </div>
+
+          <div class="foto">
+            <img src="/ferragens/maoamigaV.jpg" />
+            <h2>Especificação Mão amiga</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/especificacaomaoamigaV.jpg" />
+            <h2>Modelo Mão amiga instalada</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/roldanaN.jpg" />
+            <h2>Roldana Modelo 1</h2>
+          </div>
+
+
+          <div class="foto">
+            <img src="/ferragens/roldanaN2.jpg" />
+            <h2>Roldana Modelo 2</h2>
+          </div>
+
+          <div class="foto">
+            <img src="/ferragens/roldanaN3.jpg" />
+            <h2>Roldana Modelo</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/especificacaoroldanaN.jpg" />
+            <h2>Especificação Roldana</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/maoamigaN.jpg" />
+            <h2>Mão amiga Deslisante</h2>
+          </div>
+          <div class="foto">
+            <img src="/ferragens/gabaritomaoamigaN.jpg" />
+            <h2>Especificação Mão Amiga</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contentBx" id="content4">
+      <div class="contente4">
+        <div class="cont">
+          <div class="foto">
+            <img src="/img/pabrir.jpg" />
+            <h2>Porta de Abrir</h2>
+          </div>
+          <div class="foto">
+            <img src="/img/pabrir2.jpg" />
+            <h2>Porta de Abrir Dupla</h2>
+          </div>
+          <div class="foto">
+            <img src="/img/correratras.jpg" />
+            <h2>Porta de Correr Atras do Vão</h2>
+          </div>
+          <div class="foto">
+            <img src="/img/porta4.jpg" />
+            <h2>Porta 4 Folhas</h2>
+          </div>
+          <div class="foto">
+            <img src="/img/porta2.jpg" />
+            <h2>Porta 2 Folhas</h2>
+          </div>
+          <div class="foto">
+            <img src="/img/janela4.jpg" />
+            <h2>Janela 4 Folhas</h2>
+          </div>
+          <div class="foto">
+            <img src="/img/janela2.jpg" />
+            <h2>Janela 2 Folhas</h2>
+          </div>
+          <div class="foto">
+            <img src="/img/pivoltante.jpg" />
+            <h2>pivoltante</h2>
+          </div>
+          <div class="foto">
+            <img src="/img/bascula.jpg" />
+            <h2>Bascula</h2>
+          </div>
+          <div class="foto">
+            <img src="/img/deslisante.jpg" />
+            <h2>Porta Correr Deslisante</h2>
+          </div>
+          <div class="foto">
+            <img src="/img/Versatik.jpg" />
+            <h2>Versatik
+            </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </section>
+  <script src="main.js"></script>
+</body>
+
+</html>
