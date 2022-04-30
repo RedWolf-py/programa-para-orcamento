@@ -223,7 +223,7 @@ function gerarPdf() {
   janela.document.write('<body>');
   janela.document.write('<p>======================================================================================</p>');
   janela.document.write('<h1>');
-  janela.document.write('<center>Vidraçaria Modesto <img width="60" height="50" src="/imgV/vidros.jpg"/></center>')
+  janela.document.write('<center>Vidraçaria Modesto <img width="60" height="50" src="/imgV/vidros.png"/></center>')
   janela.document.write('</h1>');
   janela.document.write('<p>======================================================================================</p>');
 
