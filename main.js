@@ -166,9 +166,9 @@ salvarorcamento.addEventListener("click", () => {
   result2.insertAdjacentHTML('beforeend', `<p id="alturaLargura">${['Altura:' + ' ' + alturaV + ' ' + "X" + ' ' + larguraV + ' ' + 'Lagura']}</p>`);
 
 
-  result2.insertAdjacentHTML('beforeend', `<p id="materialA">${[`Material em Aluminio R\$${materialV}`]}</p>`);
+ // result2.insertAdjacentHTML('beforeend', `<p id="materialA">${[`Material em Aluminio R\$${materialV}`]}</p>`);
 
-  result2.insertAdjacentHTML('beforeend', `<p id="materialF">${[`Material De Ferragens R\$ ${ferragenV}`]}</p>`);
+  //result2.insertAdjacentHTML('beforeend', `<p id="materialF">${[`Material De Ferragens R\$ ${ferragenV}`]}</p>`);
 
   result2.insertAdjacentHTML('beforeend', `<p id="somaBruta">${[`Valor Bruto R\$ ${somar2}`]}</p>`);
 
