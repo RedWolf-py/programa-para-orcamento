@@ -1354,3 +1354,542 @@ input {
 
 }
 */
+
+@media (max-width: 1024px){
+
+  
+  .card {
+    position: fixed; 
+    width: 45vw;
+    height: 60vh;
+    margin-right: 1.5rem;
+
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+  .listadiv {
+    position: sticky;
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    background-color: rgb(126, 118, 118);
+    width: 100%;
+    height: 6%;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+   
+  
+  
+  }
+
+  .listadiv .cor {
+    margin-left: 4%;
+    z-index: 999;
+    padding-top: 0.7%;
+  
+  
+  }
+  
+  .listadiv .cor li{
+    font-size: 1rem;
+  }
+
+  .head{
+    
+    font-size: 2rem;
+    margin-left: 2rem;
+
+  }
+  .head2{
+    font-size: 2rem;
+    left: 1rem;
+
+
+  }
+
+  .espessura{
+    height: 1.5rem;
+    width: 3rem;
+  }
+  .modelo2{
+    height: 1.5rem;
+    width: 3rem;
+  }
+
+  
+
+  .card label {
+    font-size: 20px;
+  
+  }
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .listadiv {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .spam {
+    display: block;
+  }
+
+  .social-media2 {
+    display: block;
+  }
+
+  .lista {
+    display: block;
+  }
+
+  .head {
+    position: absolute;
+    font-size: 25px;
+    margin-top: -3rem;
+    left: 13rem;
+
+
+  }
+
+  .modelo2 {
+    position: absolute;
+    top: 1rem;
+    height: 1.5rem;
+  }
+
+  .head2 {
+    position: absolute;
+    font-size: 25px;
+    margin-top: -3rem;
+    left: .8rem;
+    
+
+
+  }
+
+  .espessura {
+    position: absolute;
+    top: 1rem;
+    height: 1.5rem;
+    
+
+  }
+
+  .card {
+    position: fixed; 
+    width: 80vw;
+    height: 60vh;
+    margin-right: 1.5rem;
+   
+
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+
+
+
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+
+  }
+
+  .img-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    object-fit: cover;
+  }
+
+  .menu {
+    position: absolute;
+    top: 6rem;
+    position: fixed;
+    z-index: 110;
+    right: 5.5rem;
+    
+  }
+
+  .btn1 {
+    position: absolute;
+    background: black;
+    width: 2.4rem;
+    height: .1rem;
+    border: solid;
+    border-radius: .1rem;
+    margin-left: 1.6rem;
+    bottom: .1rem;
+    cursor: pointer;
+    z-index: 110;
+    background-color: red;
+
+
+
+  }
+
+  .btn2 {
+    position: absolute;
+    color: red;
+    font-size: 1rem;
+    margin-left: 1.6rem;
+    margin-bottom: .9rem;
+    cursor: pointer;
+    z-index: 110;
+  }
+
+  .btn3 {
+    position: absolute;
+    background: black;
+    width: 2.4rem;
+    height: .1rem;
+    border: solid;
+    border-radius: .1rem;
+    margin-left: 1.6rem;
+    margin-top: 1.3rem;
+    cursor: pointer;
+    z-index: 110;
+    background-color: red;
+
+
+
+  }
+
+
+  .mostrar .btn1 {
+    transition: all .8s;
+    margin-left: -6rem;
+  }
+
+  .mostrar .btn2 {
+    opacity: 0;
+    transition: all .8s;
+  }
+
+  .mostrar .btn3 {
+    transition: all .8s;
+    margin-left: -6rem;
+
+  }
+
+  .mostrar .btn1 {
+    transform: rotate(45deg) translate(1.2rem, .9rem);
+  }
+
+  .mostrar .btn3 {
+    transform: rotate(-45deg) translate(.4rem, .1rem);
+  }
+
+  .submenu {
+
+    background: white;
+    width: 13rem;
+    height: 100vh;
+    z-index: 100;
+    right: -13rem;
+    transition: all .8s;
+    border-radius: .3rem;
+    cursor: pointer;
+    position: fixed;
+
+
+  }
+
+  .submenu .lista {
+    position: absolute;
+    margin-top: 9rem;
+    margin-left: 2rem;
+    padding-bottom: 1rem;
+
+  }
+
+  .submenu ul li {
+    padding: 1rem;
+    font-family: var(--font2);
+    font-size: 1.6rem;
+    padding-left: 0.3rem;
+    z-index: 200;
+    cursor: pointer;
+
+
+  }
+
+  .mostrar .submenu {
+    right: 0rem;
+  }
+
+  .social-media2 {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    bottom: 4rem;
+    padding: 1rem;
+
+
+  }
+
+  .social-media2 li a {
+
+    padding: 1rem;
+    z-index: 400;
+
+
+  }
+
+  .social-media2 i {
+
+    font-size: 1.8rem;
+    border-radius: 40%;
+  }
+
+  .social-media2 #fa {
+
+    color: #3c49fa;
+    transition: 1s;
+
+
+  }
+
+  .social-media2 #fa:hover {
+
+    color: #4491f5;
+    transition: 1s;
+
+
+  }
+
+  .social-media2 #wa {
+
+    color: #107c15;
+    transition: 1s;
+  }
+
+  .social-media2 #wa:hover {
+
+    color: #5fda65;
+    transition: 1s;
+  }
+
+  .social-media2 #is {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #d3ce92 5%, #fa7f74 45%, #ec08a4 60%, #285AEB 90%);
+
+  }
+
+  .spam span {
+    right: 3rem;
+    margin-top: 5.3rem;
+    padding: .3rem;
+    position: absolute;
+    right: 2rem;
+    height: 20px;
+    width: 80px;
+    border-radius: 0.2rem;
+
+  }
+
+
+  .mostrar .spam span {
+
+    font-family: var(--font3);
+    color: white;
+    background: black;
+    transition: all .8s;
+    text-align: center;
+
+
+  }
+
+  .spam span::before {
+    content: "";
+    position: absolute;
+    border-left: .5rem solid transparent;
+    border-right: .5rem solid black;
+    border-bottom: .5rem solid transparent;
+    border-top: .5rem solid transparent;
+    right: 5.6rem;
+    transition: all 1s;
+    bottom: .4rem;
+
+
+  }
+
+
+  .footer {
+    position: fixed;
+    position: absolute;
+    width: 100vw;
+    height: 11vh;
+    background: black;
+    bottom: 1rem;
+    display: inline;
+  }
+
+  .footer-content p {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    padding: .8rem;
+  }
+
+  .social-list {
+    margin-bottom: 1rem;
+    background-color: black;
+  }
+
+  .card input {
+    margin: 5px;
+    width: 80px;
+    font-family: var (--font-4);
+    height: 20px
+  }
+
+
+  .card label {
+    font-size: 25px;
+    padding: 5px;
+
+
+  }
+
+  .botao {
+    margin-top: .7rem;
+  }
+
+  .cont {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    padding-left: 1rem;
+
+  }
+
+  .cont div {
+    flex: 1 1 150px;
+    margin: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .cont img {
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .2rem 0.1rem;
+    color: black;
+
+  }
+
+  .cont h2 {
+    font-size: 1rem;
+    color: white;
+  }
+
+  .cont3 {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    padding-left: 1rem;
+
+
+
+  }
+
+  .cont3 div {
+    flex: 1 1 150px;
+    margin: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+  .cont3 img {
+    width: 100%;
+    border-radius: .5rem;
+    box-shadow: .2rem .2rem .2rem 0.1rem;
+    color: black;
+
+  }
+  .contente5{
+    top: 4rem;
+  }
+
+  .card2 {
+    height: 50vh;
+    width: 78vw;
+    padding: 2rem;
+    font-size: 1.3rem;
+    top: .5rem;
+
+  }
+
+  .card2 h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+
+
+  }
+
+  .card2 .tot {
+    width: 5rem;
+    margin-left: 5.5rem;
+    height: 1.7rem;
+    margin-top: 1.4rem;
+    border-radius: 0.8rem;
+
+  }
+
+  .porcento {
+    margin-top: 1.7rem;
+    padding: 0.5rem;
+    width: -5rem;
+    margin-left: 4.5rem;
+    font-size: .8rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+
+  }
+.calcular2 {
+  margin-top: 2rem;
+  font-size: 20px;
+  background-color: black;
+  width: 10rem;
+  height: 2rem;
+  border-radius: 10px;
+  color: red;
+  cursor: pointer;
+
+}
+
+.calcular2:hover {
+  background-color: red;
+  color: rgb(248, 244, 244);
+  font-family: var(--font-4);
+  cursor: pointer;
+  color: black;
+}
+
+
+  
+}
