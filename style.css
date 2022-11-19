@@ -1128,7 +1128,11 @@ input {
     bottom: 1rem;
     display: inline;
   }
-
+  .footer-content{
+    width: 100vw;
+    height: 13vh;
+   background-color:black;
+  }
   .footer-content p {
     display: flex;
     justify-content: center;
@@ -1205,8 +1209,8 @@ input {
     border-radius: 5px;
     color: rgb(206, 10, 10);
   }
-
-  @media (min-width: 700px) and (orientation: landscape) {
+  
+  @media (min-width: 300px) and (orientation: landscape) {
     .card {
       position: fixed;
       width: 75vw;
@@ -1353,29 +1357,16 @@ input {
       margin-top: 1.8%;
 
     }
-
-    .social-media2 {
-      display: flex;
-      justify-content: center;
-      padding-top: 2rem;
-      padding-right: 1px;
-
-    }
-
     .footer {
       position: fixed;
       position: absolute;
+      margin-top: 3%;
       width: 100vw;
-      height: 10vh;
+      height: 6vh;
       background: black;
       
     }
-    .footer-content{
-      width: 100vw;
-      height: 14vh;
-      background: black;
-    }
-
+ 
     .footer p{
       font-size: 1rem;
     font-family: var(--font-4);
@@ -1413,6 +1404,8 @@ input {
       border-radius: 12px;
 
     }
+
+  }
 
     .cont3 .fotonome {
       color: white;
@@ -1459,4 +1452,3 @@ input {
 
   }
 
-}
