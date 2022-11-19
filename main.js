@@ -19,7 +19,7 @@ let po4 = "/imgV/porta4.jpg"
 let pa = "/imgV/pabrir.jpg"
 let pa2 = "/imgV/pabrir2.jpg"
 let co = "/imgV/correratras.jpg"
-let co2 = "/imgV/correatras2B.jpg"
+let co2 = "/imgV/correratras2B.jpg"
 let pj = "/imgV/portajumbo.jpg"
 let vs = "/imgV/Versatik.jpg"
 let dl = "/imgV/deslisante.jpg"
@@ -41,7 +41,7 @@ let paX2 = document.getElementById('paX2')
 let veX = document.getElementById('veX')
 let deX = document.getElementById('deX')
 
-const arr = [pi, ba, ja2, ja4, po2, po4, pa, pa2, co,co2, pj, vs, dl];
+const arr = [pi, ba, ja2, ja4, po2, po4, pa, pa2, co, co2, pj, vs, dl];
 
 // variaveis de calculos
 
@@ -107,6 +107,22 @@ for (var i = 0; i < btli.length; i++) {
   })
 }
 
+
+//trocar plano de fundo do programa
+
+function datahora(){
+  let bgY = document.getElementById('bg')
+  let data = new Date();
+  let hora = data.getHours();
+  let min = data.getMinutes();
+  if (hora >= 12) {
+    bgY.src = '/img/bg2.jpg'
+
+  }
+}
+
+document.onload = datahora();
+
 // Funçõa para calcular valor metro quadrado do vidro
 
 function metroQuadrado() {
@@ -144,7 +160,7 @@ ViaCliente.addEventListener('click', () => {
   xy('.altura').value = "";
   xy('.largura').value = "";
   xy('.clienteFinal').value = "";
- 
+
   DimencaoImg();
 });
 
@@ -212,7 +228,8 @@ function SalvarOrcamento() {
 // salvar nome do cliente
 function SalvarInput() {
   let clienteP = xy('.cliente').value;
-  let c1 = xy('.contente21')
+  let salvarNome = xy('.contente21')
+  
   let objeto = new Array();
   if (JSON.parse(localStorage.getItem("objeto")) != null) {
     localarray.push(JSON.parse(localStorage.getItem("objeto")));
@@ -220,8 +237,8 @@ function SalvarInput() {
   localarray.push([clienteP]);
   let pessoaJson = JSON.stringify(localarray);
   localStorage.setItem("objeto", pessoaJson);
-  c1.insertAdjacentHTML('beforeend', `<p id="clienteP2">${clienteP}</p>`);
-  
+  salvarNome.insertAdjacentHTML('beforeend', `<p id="clienteP2">${clienteP}</p>`);
+
 
 }
 
@@ -510,6 +527,7 @@ function ValorCliente() {
   let moscli = xy('.contente21')
   let clienteFinal = xy('.clienteFinal').value;
   let clienteFinal2 = clienteFinal.replace(/\D+/g, '');
+
   let objeto = new Array();
   if (JSON.parse(localStorage.getItem("objeto")) != null) {
     localarray.push(JSON.parse(localStorage.getItem("objeto")));

@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Desenvolvedor Alessandro</title>
 </head>
-<script>alert('Programa foi Atualizado, Agora já Podem Imprimir e baixar em PDF os Orçamentos')</script>
+
 <body>
     <div class="mover">
         <div class="menu">
@@ -25,9 +25,6 @@
             <div class="btn3"></div>
         </div>
         <nav class="submenu">
-            <div class="spam">
-                <span>Fechar</span>
-            </div>
             <div class="listadiv">
                 <div class="cor selected">
                     <ul class="btli active" data-id="content1">
@@ -56,7 +53,7 @@
                     <li>Inicio</li>
                 </ul>
                 <ul class="btli active" data-id="content2">
-                    <li>Imprimir</li>
+                    <li>Orcamento</li>
                 </ul>
                 <ul class="btli active" data-id="content3">
                     <li>Tipos de Ferragens</li>
@@ -66,18 +63,19 @@
                 </ul>
 
                 <div class="social-media2">
-                    <li><a href="https://www.instagram.com/snoop5902/"><i class="fab fa-instagram" id="is"></i></a></li>
+                    <li><a href="https://www.instagram.com/snoop5902/" target="-blank"><i class="fab fa-instagram" id="is"></i></a></li>
                     <li><a href="https://www.facebook.com/alessandro.amaral.33" target="-blank" rel="esternal"><i
                                 class="fab fa-facebook-f" id="fa"></i></a></li>
                     <li><a href="https://api.whatsapp.com/send?phone=5573988117129" target="-blank" rel="external"><i
                                 class="fab fa-whatsapp" id="wa"></i></a></li>
                 </div>
+            </div>
         </nav>
     </div>
 
     <section>
         <div class="img-bg">
-            <img src="/img/bg.jpg">
+            <img id="bg" src="/img/bg.jpg">
             <div class="erro">
             </div>
             <div class="contentBx active" id="content1">
@@ -133,7 +131,8 @@
                             </div>
                             <div class="input"> <label>Altura em Cm:</label> <input type="text" class='altura'> </div>
                             <div class="input"> <label>Largura em Cm:</label> <input type="text" class='largura'> </div>
-                            <div class="input"> <label>Preço Para Cliente:</label> <input type="text" class='clienteFinal' onchange="ValorCliente()">
+                            <div class="input"> <label>Preço Para Cliente:</label> <input type="text"
+                                    class='clienteFinal' onchange="ValorCliente()">
                             </div>
                             <div class="botao">
                                 <button class='calcular'>Calcular</button> <button class='salvarorcamento'>Salvar Em
@@ -142,7 +141,7 @@
 
                             <div class="resultado"></div>
                             <div class="resultadosomar"></div>
-                            <div class="resultadofinal"></div>
+                            <div class="resultadofinal">ddddddddddddd</div>
                         </div>
                     </div>
                 </main>
@@ -182,7 +181,7 @@
                     <ul>
                         <li class="li"><a href="https://www.facebook.com/alessandro.amaral.33" target="-blank"
                                 rel="external"><i class="fab fa-facebook-f" id="f"></i></a></li>
-                        <li class="li"><a href="https://www.instagram.com/snoop5902/"><i class="fab fa-instagram"
+                        <li class="li"><a href="https://www.instagram.com/snoop5902/" target="-blank"><i class="fab fa-instagram"
                                     id="i"></i></a>
                         </li>
                         <li class="li"><a href="https://api.whatsapp.com/send?phone=5573988117129" target="-blank"
@@ -209,7 +208,8 @@
         </div>
         <div class="contentBx" id="content3">
             <div class="contente3">
-                <div class="cont3"></div>
+                <div class="cont3">
+                </div>
                 <div class="clone">
                     <div class="foto"><img src=""></div>
                     <div class="fotonome"></div>
@@ -223,7 +223,6 @@
         </div>
         <div class="contentBx" id="content2">
             <div class="contente21">
-
             </div>
             <button class="btn" onclick="Imprimir()">Imprimir</button>
         </div>
