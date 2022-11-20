@@ -1212,7 +1212,7 @@ input {
   }
 }
 
-@media (min-height: 300px) and (orientation: landscape) {
+@media (max-height: 300px) and (orientation: landscape) {
   .card {
     margin-top: -1.5%;
     position: fixed;
@@ -1222,11 +1222,13 @@ input {
     background-color: rgba(78, 83, 97, 0.651);
 
   }
-.card h1{
-  font-size: 1.2rem;
-  padding: 0%;
-  margin-top: -18px;
-}
+
+  .card h1 {
+    font-size: 1.2rem;
+    padding: 0%;
+    margin-top: -18px;
+  }
+
   .modelo2 {
     position: absolute;
     margin-left: 360px;
@@ -1241,15 +1243,17 @@ input {
   }
 
 
-  .head2 label{
+  .head2 label {
     position: absolute;
     font-size: 25px;
     left: .8rem;
   }
-.espessura{
-  position: absolute;
-  left: 100px;
-}
+
+  .espessura {
+    position: absolute;
+    left: 100px;
+  }
+
   .card input {
     margin: 1px;
     width: 70px;
@@ -1260,7 +1264,7 @@ input {
     margin-top: 3px;
     font-size: 18px;
     padding: 0px;
-  
+
   }
 
   .menu {
@@ -1373,6 +1377,7 @@ input {
     margin-top: 1.8%;
 
   }
+
   .contente21 {
     width: 100vw;
     height: 100vh;
