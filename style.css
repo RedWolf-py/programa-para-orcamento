@@ -893,7 +893,6 @@ input {
     font-size: 25px;
     margin-top: -3rem;
     left: .8rem;
-
   }
 
   .espessura {
@@ -1128,11 +1127,13 @@ input {
     bottom: 1rem;
     display: inline;
   }
-  .footer-content{
+
+  .footer-content {
     width: 100vw;
     height: 13vh;
-   background-color:black;
+    background-color: black;
   }
+
   .footer-content p {
     display: flex;
     justify-content: center;
@@ -1209,247 +1210,248 @@ input {
     border-radius: 5px;
     color: rgb(206, 10, 10);
   }
+}
+
+@media (min-height: 300px) and (orientation: landscape) {
+  .card {
+    margin-top: -1.5%;
+    position: fixed;
+    width: 75vw;
+    height: 64vh;
+    margin-right: 1.5rem;
+    background-color: rgba(78, 83, 97, 0.651);
+
+  }
+.card h1{
+  font-size: 1.2rem;
+  padding: 0%;
+  margin-top: -18px;
+}
+  .modelo2 {
+    position: absolute;
+    margin-left: 360px;
+    top: 1rem;
+    height: 1.5rem;
+
+  }
+
+  .head label {
+    position: absolute;
+    margin-left: 280px;
+  }
+
+
+  .head2 label{
+    position: absolute;
+    font-size: 25px;
+    left: .8rem;
+  }
+.espessura{
+  position: absolute;
+  left: 100px;
+}
+  .card input {
+    margin: 1px;
+    width: 70px;
+    height: 14px
+  }
+
+  .card label {
+    margin-top: 3px;
+    font-size: 18px;
+    padding: 0px;
   
-  @media (min-width: 300px) and (orientation: landscape) {
-    .card {
-      position: fixed;
-      width: 75vw;
-      height: 60vh;
-      margin-right: 1.5rem;
-      background-color: rgba(78, 83, 97, 0.651);
+  }
 
-    }
+  .menu {
+    position: absolute;
+    top: 3.5rem;
+    position: fixed;
+    z-index: 110;
+    right: 5.5rem;
+    z-index: 500;
 
-
-    .modelo2 {
-      position: absolute;
-      margin-left: 360px;
-      top: 1rem;
-      height: 1.5rem;
-
-    }
-
-    .head label {
-      position: absolute;
-      margin-left: 280px;
-    }
-
-    .card input {
-      margin: 1px;
-      width: 70px;
-      height: 14px
-    }
-
-    .card label {
-      font-size: 18px;
-      padding: 0px;
-    }
-
-    .menu {
-      position: absolute;
-      top: 3.5rem;
-      position: fixed;
-      z-index: 110;
-      right: 5.5rem;
-      z-index: 500;
-
-    }
+  }
 
 
-    .btn1 {
-      position: absolute;
-      background: black;
-      width: 2.4rem;
-      height: .1rem;
-      border: solid;
-      border-radius: .1rem;
-      margin-left: 1.6rem;
-      bottom: .1rem;
-      cursor: pointer;
-      z-index: 110;
-      background-color: red;
+  .btn1 {
+    position: absolute;
+    background: black;
+    width: 2.4rem;
+    height: .1rem;
+    border: solid;
+    border-radius: .1rem;
+    margin-left: 1.6rem;
+    bottom: .1rem;
+    cursor: pointer;
+    z-index: 110;
+    background-color: red;
 
-
-
-    }
-
-    .btn2 {
-      position: absolute;
-      color: red;
-      font-size: 1rem;
-      margin-left: 1.6rem;
-      margin-bottom: .9rem;
-      cursor: pointer;
-      z-index: 110;
-    }
-
-    .btn3 {
-      position: absolute;
-      background: black;
-      width: 2.4rem;
-      height: .1rem;
-      border: solid;
-      border-radius: .1rem;
-      margin-left: 1.6rem;
-      margin-top: 1.3rem;
-      cursor: pointer;
-      z-index: 110;
-      background-color: red;
-
-
-
-    }
-
-
-    .mostrar .btn1 {
-      transition: all .8s;
-      margin-left: -6rem;
-    }
-
-    .mostrar .btn2 {
-      opacity: 0;
-      transition: all .8s;
-    }
-
-
-    .submenu {
-      position: fixed;
-      background: white;
-      width: 12rem;
-      height: 100vh;
-      z-index: 400;
-      right: -13rem;
-      transition: all .8s;
-      border-radius: .3rem;
-      cursor: pointer;
-
-
-
-    }
-
-    .submenu .lista {
-      position: absolute;
-      margin-top: 6.4rem;
-      margin-left: 2rem;
-      padding-bottom: 1rem;
-
-    }
-
-    .submenu ul li {
-      padding: 0.5rem;
-      font-family: var(--font4);
-      font-size: 1.4rem;
-      padding-left: 0.3rem;
-      z-index: 200;
-      cursor: pointer;
-
-
-    }
-
-    .mostrar .submenu {
-      right: 0rem;
-    }
-
-
-    .pcento {
-      display: inline;
-      justify-content: center;
-      margin-top: 1.8%;
-
-    }
-    .footer {
-      position: fixed;
-      position: absolute;
-      margin-top: 3%;
-      width: 100vw;
-      height: 6vh;
-      background: black;
-      
-    }
- 
-    .footer p{
-      font-size: 1rem;
-    font-family: var(--font-4);
-    }
-    .contente21 {
-      width: 100vw;
-      height: 100vh;
-    }
-
-    .contente3 {
-      padding: 0%;
-      position: relative;
-    }
-
-    .btn {
-      padding: 0%;
-      position: relative;
-    }
-
-    .botao {
-      height: 10px;
-      margin-top: -4%;
-
-    }
-
-    .salvarorcamento {
-      font-size: 0.8rem;
-    }
-
-    .contente3 img {
-      width: 150px;
-      height: 150px;
-      padding: 5px;
-      margin-left: 20%;
-      border-radius: 12px;
-
-    }
-
-  
-
-    .cont3 .fotonome {
-      color: white;
-      font-family: var(--font-4);
-      font-size: 1rem;
-      padding: 4px;
-      margin-left: 20%;
-
-
-    }
-
-    .contente4 {
-      padding: 0%;
-      position: relative;
-    }
-
-    .contente4 img {
-      width: 150px;
-      height: 150px;
-      padding: 5px;
-      margin-left: 5%;
-      border-radius: 12px;
-    }
-
-    .resultado {
-      position: absolute;
-      font-size: 22px;
-      margin-top: 25px;
-      left: 1px;
-      border-radius: 5px;
-      color: rgb(206, 10, 10);
-    }
-
-    .resultaMobile {
-      position: absolute;
-      margin-top: 55px;
-      font-size: 22px;
-      width: 55%;
-      height: 7%;
-      margin-right: -90px;
-      color: rgb(206, 10, 10);
-    }
 
 
   }
-}
 
+  .btn2 {
+    position: absolute;
+    color: red;
+    font-size: 1rem;
+    margin-left: 1.6rem;
+    margin-bottom: .9rem;
+    cursor: pointer;
+    z-index: 110;
+  }
+
+  .btn3 {
+    position: absolute;
+    background: black;
+    width: 2.4rem;
+    height: .1rem;
+    border: solid;
+    border-radius: .1rem;
+    margin-left: 1.6rem;
+    margin-top: 1.3rem;
+    cursor: pointer;
+    z-index: 110;
+    background-color: red;
+
+  }
+
+
+  .mostrar .btn1 {
+    transition: all .8s;
+    margin-left: -6rem;
+  }
+
+  .mostrar .btn2 {
+    opacity: 0;
+    transition: all .8s;
+  }
+
+
+  .submenu {
+    position: fixed;
+    background: white;
+    width: 12rem;
+    height: 100vh;
+    z-index: 400;
+    right: -13rem;
+    transition: all .8s;
+    border-radius: .3rem;
+    cursor: pointer;
+
+
+
+  }
+
+  .submenu .lista {
+    position: absolute;
+    margin-top: 6.4rem;
+    margin-left: 2rem;
+    padding-bottom: 1rem;
+
+  }
+
+  .submenu ul li {
+    padding: 0.5rem;
+    font-family: var(--font4);
+    font-size: 1.4rem;
+    padding-left: 0.3rem;
+    z-index: 200;
+    cursor: pointer;
+
+
+  }
+
+  .mostrar .submenu {
+    right: 0rem;
+  }
+
+
+  .pcento {
+    display: inline;
+    justify-content: center;
+    margin-top: 1.8%;
+
+  }
+  .contente21 {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .contente3 {
+    padding: 0%;
+    position: relative;
+  }
+
+  .btn {
+    padding: 0%;
+    position: relative;
+  }
+
+  .botao {
+    height: 10px;
+    margin-top: -4%;
+
+  }
+
+  .salvarorcamento {
+    font-size: 0.8rem;
+  }
+
+  .contente3 img {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    margin-left: 20%;
+    border-radius: 12px;
+
+  }
+
+
+  .cont3 .fotonome {
+    color: white;
+    font-family: var(--font-4);
+    font-size: 1rem;
+    padding: 4px;
+    margin-left: 20%;
+
+
+  }
+
+  .contente4 {
+    padding: 0%;
+    position: relative;
+  }
+
+  .contente4 img {
+    width: 150px;
+    height: 150px;
+    padding: 5px;
+    margin-left: 5%;
+    border-radius: 12px;
+  }
+
+  .resultado {
+    position: absolute;
+    font-size: 22px;
+    margin-top: 25px;
+    left: 1px;
+    border-radius: 5px;
+    color: rgb(206, 10, 10);
+  }
+
+  .resultaMobile {
+    position: absolute;
+    margin-top: 70px;
+    font-size: 22px;
+    width: 55%;
+    height: 7%;
+    margin-right: -90px;
+    color: rgb(206, 10, 10);
+  }
+
+  .footer {
+    display: none;
+  }
+
+}

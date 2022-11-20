@@ -187,16 +187,13 @@ function campoModel() {
   let sessaocliente = clienteX.value;
   let espessuraZ = espessuraX.options[espessuraX.selectedIndex];
   let espessuraFinal = espessuraZ.value;
-  if (window.matchMedia("(max-width: 700px)").matches) {
-    metroQuadrado()
-  } else {
-    if (sessaoFinal.length <= 0 || espessuraFinal.length <= 0 || sessaocliente.length <= 0) {
-      alert('Nome Do Cliente, Espessura e Modelo Do Vidro são obrigatorio ser Preenchido')
+  //if (window.matchMedia("(max-width: 700px)").matches) {}
+    if (sessaoFinal.length <= 0 || sessaocliente.length <= 0) {
+      alert('Nome Do Cliente, E o Modelo Do Vidro são obrigatorio ser Preenchido')
 
     } else {
       metroQuadrado()
     }
-  }
   }
 
   // Salvando tudo no localStorage
