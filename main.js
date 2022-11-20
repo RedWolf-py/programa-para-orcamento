@@ -70,7 +70,7 @@ setInterval(Animation, 600000)
 
 setInterval(() => {
   localStorage.clear();
-}, 1200000)
+}, 36000000)
 
 // Menu hamburguer para mobile
 
@@ -188,357 +188,361 @@ function campoModel() {
   let espessuraZ = espessuraX.options[espessuraX.selectedIndex];
   let espessuraFinal = espessuraZ.value;
   //if (window.matchMedia("(max-width: 700px)").matches) {}
-    if (sessaoFinal.length <= 0 || sessaocliente.length <= 0) {
-      alert('Nome Do Cliente, E o Modelo Do Vidro são obrigatorio ser Preenchido')
+  if (sessaoFinal.length <= 0 || sessaocliente.length <= 0) {
+    alert('Nome Do Cliente, E o Modelo Do Vidro são obrigatorio ser Preenchido')
 
-    } else {
-      metroQuadrado()
-    }
+  } else {
+    metroQuadrado()
   }
+}
 
-  // Salvando tudo no localStorage
+// Salvando tudo no localStorage
 
-  function SalvarOrcamento() {
+function SalvarOrcamento() {
 
-    var objeto = new Array();
-    if (JSON.parse(localStorage.getItem("objeto")) != null) {
-      localarray.push(JSON.parse(localStorage.getItem("objeto")));
-    }
-    var vidroE = xy('.espessura').value;
-    var vidroM = xy('.modelo2').value;
-    var alturaV = xy('.altura').value;
-    var larguraV = xy('.largura').value;
-    var result10 = xy('.result10')
-    var c2 = xy('.contente21')
-
-    var tipoVidro = [vidroM, vidroE, alturaV, larguraV, calcularSoma];
-    localarray.push(tipoVidro);
-    var pessoaJson = JSON.stringify(localarray);
-    localStorage.setItem("objeto", pessoaJson);
-    c2.insertAdjacentHTML('beforeend', `<p id="modeloespessura">${['Modelo:' + ' ' + vidroM + ' ' + ' ' + 'Espessura:' + ' ' + vidroE]}</p>`);
-
-    c2.insertAdjacentHTML('beforeend', `<p id="alturaLargura">${['Altura:' + ' ' + alturaV + ' ' + "X" + ' ' + larguraV + ' ' + 'Lagura']}</p>`);
-
-    result10.insertAdjacentHTML('beforeend', `<p id="modeloespessura2">${['Modelo:' + ' ' + vidroM + ' ' + ' ' + 'Espessura:' + ' ' + vidroE]}</p>`);
-    result10.insertAdjacentHTML('beforeend', `<p id="alturaLargura2">${['Altura:' + ' ' + alturaV + ' ' + "X" + ' ' + larguraV + ' ' + 'Lagura']}</p>`);
-    result10.insertAdjacentHTML('beforeend', `<p id="somaBruta">${[`Valor Bruto R\$ ${calcularSoma}`]}</p>`);
-  };
-
-  // salvar nome do cliente
-  function SalvarInput() {
-    let clienteP = xy('.cliente').value;
-    let salvarNome = xy('.contente21')
-
-    let objeto = new Array();
-    if (JSON.parse(localStorage.getItem("objeto")) != null) {
-      localarray.push(JSON.parse(localStorage.getItem("objeto")));
-    }
-    localarray.push([clienteP]);
-    let pessoaJson = JSON.stringify(localarray);
-    localStorage.setItem("objeto", pessoaJson);
-    salvarNome.insertAdjacentHTML('beforeend', `<p id="clienteP2">${clienteP}</p>`);
-
-
+  var objeto = new Array();
+  if (JSON.parse(localStorage.getItem("objeto")) != null) {
+    localarray.push(JSON.parse(localStorage.getItem("objeto")));
   }
+  var vidroE = xy('.espessura').value;
+  var vidroM = xy('.modelo2').value;
+  var alturaV = xy('.altura').value;
+  var larguraV = xy('.largura').value;
+  var result10 = xy('.result10')
+  var c2 = xy('.contente21')
+
+  var tipoVidro = [vidroM, vidroE, alturaV, larguraV, calcularSoma];
+  localarray.push(tipoVidro);
+  var pessoaJson = JSON.stringify(localarray);
+  localStorage.setItem("objeto", pessoaJson);
+  c2.insertAdjacentHTML('beforeend', `<p id="modeloespessura">${['Modelo:' + ' ' + vidroM + ' ' + ' ' + 'Espessura:' + ' ' + vidroE]}</p>`);
+
+  c2.insertAdjacentHTML('beforeend', `<p id="alturaLargura">${['Altura:' + ' ' + alturaV + ' ' + "X" + ' ' + larguraV + ' ' + 'Lagura']}</p>`);
+
+  result10.insertAdjacentHTML('beforeend', `<p id="modeloespessura2">${['Modelo:' + ' ' + vidroM + ' ' + ' ' + 'Espessura:' + ' ' + vidroE]}</p>`);
+  result10.insertAdjacentHTML('beforeend', `<p id="alturaLargura2">${['Altura:' + ' ' + alturaV + ' ' + "X" + ' ' + larguraV + ' ' + 'Lagura']}</p>`);
+  result10.insertAdjacentHTML('beforeend', `<p id="somaBruta">${[`Valor Bruto R\$ ${calcularSoma}`]}</p>`);
+};
+
+// salvar nome do cliente
+function SalvarInput() {
+  let clienteP = xy('.cliente').value;
+  let salvarNome = xy('.contente21')
+
+  let objeto = new Array();
+  if (JSON.parse(localStorage.getItem("objeto")) != null) {
+    localarray.push(JSON.parse(localStorage.getItem("objeto")));
+  }
+  localarray.push([clienteP]);
+  let pessoaJson = JSON.stringify(localarray);
+  localStorage.setItem("objeto", pessoaJson);
+  salvarNome.insertAdjacentHTML('beforeend', `<p id="clienteP2">${clienteP}</p>`);
+
+
+}
 
 
 
 
-  // funcao do menu desktop para alterar a cor do menu clicado
+// funcao do menu desktop para alterar a cor do menu clicado
 
-  document.querySelectorAll('.cor').forEach(function (hove) {
-    hove.addEventListener('click', function (e) {
-      xy('.cor.selected').classList.remove('selected');
-      hove.classList.add('selected')
+document.querySelectorAll('.cor').forEach(function (hove) {
+  hove.addEventListener('click', function (e) {
+    xy('.cor.selected').classList.remove('selected');
+    hove.classList.add('selected')
 
-    });
+  });
+})
+
+// funcao de adicionar eventos nos campos dos inputs
+
+var footerClick = xys('.preco,.altura,.largura, .tot, .cliente');
+
+for (var i = 0; i < footerClick.length; i++) {
+  footerClick[i].addEventListener("click", function () {
+    xy('.footer').classList.add('show')
+
   })
-
-  // funcao de adicionar eventos nos campos dos inputs
-
-  var footerClick = xys('.preco,.altura,.largura, .tot, .cliente');
-
-  for (var i = 0; i < footerClick.length; i++) {
-    footerClick[i].addEventListener("click", function () {
-      xy('.footer').classList.add('show')
-
-    })
-  };
+};
 
 
-  //modelo dos vidros do painel mostrar modelo e salvar o que o cliente quer
+//modelo dos vidros do painel mostrar modelo e salvar o que o cliente quer
 
-  function ModeloVi() {
+function ModeloVi() {
 
-    let imgDi = xy('.imgDi')
-    let MdOptions = xy('.modelo2').value;
+  let imgDi = xy('.imgDi')
+  let MdOptions = xy('.modelo2').value;
 
-    if (MdOptions == 'bascula') {
-      imgDi.innerHTML = ""
-      mgb = document.createElement('img')
-      mgb.src = ba
-      imgDi.appendChild(mgb)
-      arr64.push(baX)
-    }
+  if (MdOptions == 'bascula') {
+    imgDi.innerHTML = ""
+    mgb = document.createElement('img')
+    mgb.src = ba
+    imgDi.appendChild(mgb)
+    arr64.push(baX)
+  }
 
-    if (MdOptions == 'pivoltante') {
-      imgDi.innerHTML = ""
-      mgp = document.createElement('img')
-      mgp.src = pi
-      imgDi.appendChild(mgp)
-      arr64.push(piX)
-
-    }
-
-    if (MdOptions == 'janela2B') {
-      imgDi.innerHTML = ""
-      mgj2 = document.createElement('img')
-      mgj2.src = ja2
-      imgDi.appendChild(mgj2)
-      arr64.push(jaX2)
-
-    }
-
-    if (MdOptions == 'janela4B') {
-      imgDi.innerHTML = ""
-      mgj4 = document.createElement('img')
-      mgj4.src = ja4
-      imgDi.appendChild(mgj4)
-      arr64.push(jaX4)
-
-    }
-
-    if (MdOptions == 'portaP') {
-      imgDi.innerHTML = ""
-      mgpa = document.createElement('img')
-      mgpa.src = pa
-      imgDi.appendChild(mgpa)
-      arr64.push(paX)
-
-    }
-
-    if (MdOptions == 'portaP2B') {
-      imgDi.innerHTML = ""
-      mgpa2 = document.createElement('img')
-      mgpa2.src = pa2
-      imgDi.appendChild(mgpa2)
-      arr64.push(paX2)
-
-    }
-    if (MdOptions == 'porta2B') {
-      imgDi.innerHTML = ""
-      mgpa2 = document.createElement('img')
-      mgpa2.src = po2
-      imgDi.appendChild(mgpa2)
-      arr64.push(paX2)
-
-    }
-
-    if (MdOptions == 'porta4B') {
-      imgDi.innerHTML = ""
-      mgpo4 = document.createElement('img')
-      mgpo4.src = po4
-      imgDi.appendChild(mgpo4)
-      arr64.push(poX4)
-
-    }
-    if (MdOptions == 'portaCorrer') {
-      imgDi.innerHTML = ""
-      mgco = document.createElement('img')
-      mgco.src = co
-      imgDi.appendChild(mgco)
-      arr64.push(coX)
-
-    }
-    if (MdOptions == 'portaCorrer2B') {
-      imgDi.innerHTML = ""
-      mgco = document.createElement('img')
-      mgco.src = co2
-      imgDi.appendChild(mgco)
-      arr64.push(coX2)
-
-    }
-    if (MdOptions == 'portaJumbo') {
-      imgDi.innerHTML = ""
-      mgpj = document.createElement('img')
-      mgpj.src = pj
-      imgDi.appendChild(mgpj)
-
-    }
-    if (MdOptions == 'portaDeslisante') {
-      imgDi.innerHTML = ""
-      mgdl = document.createElement('img')
-      mgdl.src = dl
-      imgDi.appendChild(mgdl)
-      arr64.push(deX)
-    }
-
-    if (MdOptions == 'portaVersatik') {
-      imgDi.innerHTML = ""
-      mgvi = document.createElement('img')
-      mgvi.src = vs
-      imgDi.appendChild(mgvi)
-      arr64.push(veX)
-    }
-
-    return;
+  if (MdOptions == 'pivoltante') {
+    imgDi.innerHTML = ""
+    mgp = document.createElement('img')
+    mgp.src = pi
+    imgDi.appendChild(mgp)
+    arr64.push(piX)
 
   }
 
+  if (MdOptions == 'janela2B') {
+    imgDi.innerHTML = ""
+    mgj2 = document.createElement('img')
+    mgj2.src = ja2
+    imgDi.appendChild(mgj2)
+    arr64.push(jaX2)
+
+  }
+
+  if (MdOptions == 'janela4B') {
+    imgDi.innerHTML = ""
+    mgj4 = document.createElement('img')
+    mgj4.src = ja4
+    imgDi.appendChild(mgj4)
+    arr64.push(jaX4)
+
+  }
+
+  if (MdOptions == 'portaP') {
+    imgDi.innerHTML = ""
+    mgpa = document.createElement('img')
+    mgpa.src = pa
+    imgDi.appendChild(mgpa)
+    arr64.push(paX)
+
+  }
+
+  if (MdOptions == 'portaP2B') {
+    imgDi.innerHTML = ""
+    mgpa2 = document.createElement('img')
+    mgpa2.src = pa2
+    imgDi.appendChild(mgpa2)
+    arr64.push(paX2)
+
+  }
+  if (MdOptions == 'porta2B') {
+    imgDi.innerHTML = ""
+    mgpa2 = document.createElement('img')
+    mgpa2.src = po2
+    imgDi.appendChild(mgpa2)
+    arr64.push(paX2)
+
+  }
+
+  if (MdOptions == 'porta4B') {
+    imgDi.innerHTML = ""
+    mgpo4 = document.createElement('img')
+    mgpo4.src = po4
+    imgDi.appendChild(mgpo4)
+    arr64.push(poX4)
+
+  }
+  if (MdOptions == 'portaCorrer') {
+    imgDi.innerHTML = ""
+    mgco = document.createElement('img')
+    mgco.src = co
+    imgDi.appendChild(mgco)
+    arr64.push(coX)
+
+  }
+  if (MdOptions == 'portaCorrer2B') {
+    imgDi.innerHTML = ""
+    mgco = document.createElement('img')
+    mgco.src = co2
+    imgDi.appendChild(mgco)
+    arr64.push(coX2)
+
+  }
+  if (MdOptions == 'portaJumbo') {
+    imgDi.innerHTML = ""
+    mgpj = document.createElement('img')
+    mgpj.src = pj
+    imgDi.appendChild(mgpj)
+
+  }
+  if (MdOptions == 'portaDeslisante') {
+    imgDi.innerHTML = ""
+    mgdl = document.createElement('img')
+    mgdl.src = dl
+    imgDi.appendChild(mgdl)
+    arr64.push(deX)
+  }
+
+  if (MdOptions == 'portaVersatik') {
+    imgDi.innerHTML = ""
+    mgvi = document.createElement('img')
+    mgvi.src = vs
+    imgDi.appendChild(mgvi)
+    arr64.push(veX)
+  }
+
+  return;
+
+}
 
 
-  //porcetagem do orçamento 
 
-  function porcentoSo() {
+//porcetagem do orçamento 
 
-    let result7 = xy('.result7')
-    let resultMobile = xy('.resultaMobile');
-    let somaPorcento1 = xy('.porcento');
-    let SpOptions = somaPorcento1.options[somaPorcento1.selectedIndex].value;
-    let somarporcentoT = parseInt(SpOptions) * parseInt(calcularSoma);
-    let somarporcentoX = parseInt(somarporcentoT) / 100;
-    let somarporcentoF = somarporcentoX + calcularSoma;
+function porcentoSo() {
 
-    result7.innerHTML = `Valor Total: R$: ${somarporcentoF}`
+  let result7 = xy('.result7')
+  let resultMobile = xy('.resultaMobile');
+  let somaPorcento1 = xy('.porcento');
+  let SpOptions = somaPorcento1.options[somaPorcento1.selectedIndex].value;
+  let somarporcentoT = parseInt(SpOptions) * parseInt(calcularSoma);
+  let somarporcentoX = parseInt(somarporcentoT) / 100;
+  let somarporcentoF = parseInt(somarporcentoX) + parseInt(calcularSoma);
+
+  result7.innerHTML = `Valor Total: R$: ${somarporcentoF}`
+  if (window.matchMedia("(max-width: 700px)").matches) {
     resultMobile.innerHTML = `Total: R$: ${somarporcentoF}`
-
   }
+}
 
-  //calcular mao de obra
+//calcular mao de obra
 
-  function Px() {
-    let inputN = xy('.entrarP').value;
-    let porcentoX2 = xy('.porcento2');
-    let Options = porcentoX2.options[porcentoX2.selectedIndex].value;
-    let smpT = parseInt(Options) * parseInt(inputN);
-    let smpX = parseInt(smpT) / 100;
-    let smpF = parseInt(smpX) + parseInt(inputN);
-    let result12 = xy('.result12');
-    result12.innerHTML = `Valor Final: R$: ${smpF}`
+function Px() {
+  let inputN = xy('.entrarP').value;
+  let porcentoX2 = xy('.porcento2');
+  let Options = porcentoX2.options[porcentoX2.selectedIndex].value;
+  let smpT = parseInt(Options) * parseInt(inputN);
+  let smpX = parseInt(smpT) / 100;
+  let smpF = parseInt(smpX) + parseInt(inputN);
+  let result12 = xy('.result12');
+  result12.innerHTML = `Valor Final: R$: ${smpF}`
+}
+
+//Criar imagem dinamicamente
+
+function CriarImage() {
+  let contente4 = xy(".contente4")
+  for (let i = 0; i < arr.length; i++) {
+    img = document.createElement('img');
+    img.src = arr[i]
+    contente4.appendChild(img)
   }
+}
+CriarImage()
+//Criar imagem dinamicamente para Via do cliente 
 
-  //Criar imagem dinamicamente
+function AddImage() {
 
-  function CriarImage() {
-    let contente4 = xy(".contente4")
-    for (let i = 0; i < arr.length; i++) {
-      img = document.createElement('img');
-      img.src = arr[i]
-      contente4.appendChild(img)
-    }
-  }
-  CriarImage()
-  //Criar imagem dinamicamente para Via do cliente 
+  let contentevia = xy(".contente21")
 
-  function AddImage() {
-
-    let contentevia = xy(".contente21")
-
-    let arr2 = arr64.filter(function (e, i) {
-      return arr64.indexOf(e) === i
-    });
-
-    for (let i = 0; i < arr2.length; i++) {
-      img = arr2[i]
-      contentevia.appendChild(img)
-    }
-  }
-
-  //criando imagens das ferragens
-
-  ferragens.map((el) => {
-    let imgF = xy('.clone').cloneNode(true);
-    xy('.cont3').append(imgF);
-    imgF.querySelector('.foto img').src = el.img;
-    imgF.querySelector('.fotonome').innerHTML = el.nome
-
-  })
-
-  //Gerar imagems base64
-  SalvarPdf.addEventListener('click', () => {
-    //comparae elementos repetidos nos arrays
-    const arr64Verificado = arr64.filter(function (el, index) {
-      return arr64.indexOf(el) === index
-    })
-
-    for (let b = 0; b < arr64Verificado.length; b++) {
-      let img64 = arr64Verificado[b];
-      var canvas = document.createElement('canvas');
-      var ctx = canvas.getContext('2d');
-      canvas.width = 700
-      canvas.height = 1700
-      ctx.drawImage(img64, 5, 620, 300, 300);
-      let imgbase64 = canvas.toDataURL();
-
-      imgconvert.push(imgbase64)
-
-    }
-
-    GerarPDF();
+  let arr2 = arr64.filter(function (e, i) {
+    return arr64.indexOf(e) === i
   });
 
-  //Gerar arquivo em PDF
+  for (let i = 0; i < arr2.length; i++) {
+    img = arr2[i]
+    contentevia.appendChild(img)
+  }
+}
 
-  function GerarPDF() {
-    let conteY = xy('.contente21')
+//criando imagens das ferragens
 
-    var doc = new jsPDF()
-    for (let g = 0; g < imgconvert.length; g++) {
-      let pdfFinal = imgconvert[g]
-      doc.fromHTML(conteY, 10, 0)
-      doc.addImage(pdfFinal, 10, 1, 300, 500)
+ferragens.map((el) => {
+  let imgF = xy('.clone').cloneNode(true);
+  xy('.cont3').append(imgF);
+  imgF.querySelector('.foto img').src = el.img;
+  imgF.querySelector('.fotonome').innerHTML = el.nome
 
-    }
-    doc.save('Orcamento.pdf')
+})
+
+//Gerar imagems base64
+SalvarPdf.addEventListener('click', () => {
+  //comparae elementos repetidos nos arrays
+  const arr64Verificado = arr64.filter(function (el, index) {
+    return arr64.indexOf(el) === index
+  })
+
+  for (let b = 0; b < arr64Verificado.length; b++) {
+    let img64 = arr64Verificado[b];
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+    canvas.width = 700
+    canvas.height = 1700
+    ctx.drawImage(img64, 5, 620, 300, 300);
+    let imgbase64 = canvas.toDataURL();
+
+    imgconvert.push(imgbase64)
 
   }
 
+  GerarPDF();
+});
 
-  // funcao para imprimir documento
+//Gerar arquivo em PDF
 
-  function Imprimir() {
-    let ocultarMenu = xy('.listadiv')
-    let im = xy('.btn')
-    ocultarMenu.style.opacity = '0'
-    im.style.opacity = '0'
-    window.print()
-    ocultarMenu.style.opacity = '1'
-    im.style.opacity = '1'
-  }
+function GerarPDF() {
+  let conteY = xy('.contente21')
 
-  // funcao para remderizar imagens
-
-  function DimencaoImg() {
-    let img = xys('.contente21 img')
-    if (img.length == 1) {
-      img.forEach((el) => {
-        let img2 = el
-        img2.style.width = '550px'
-        img2.style.height = '550px'
-        img2.style.marginTop = "130px"
-        img2.style.marginLeft = "130px"
-      })
-    }
-  }
-
-  //salvar valor final para o cliente
-
-  function ValorCliente() {
-    let moscli = xy('.contente21')
-    let resultaMobile2 = xy('.resultaMobile')
-    let clienteFinal = xy('.clienteFinal').value;
-    let clienteFinal2 = clienteFinal.replace(/\D+/g, '');
-
-    let objeto = new Array();
-    if (JSON.parse(localStorage.getItem("objeto")) != null) {
-      localarray.push(JSON.parse(localStorage.getItem("objeto")));
-    }
-    localarray.push([clienteFinal2]);
-    let pessoaJson = JSON.stringify(localarray);
-    localStorage.setItem("objeto", pessoaJson);
-    let resultFinal = parseInt(clienteFinal2) + parseInt(calcularSoma)
-
-    moscli.insertAdjacentHTML('beforeend', `<p id="somaBruta">${[`Valor Bruto R\$ ${resultFinal}`]}</p>`);
-    resultaMobile2.innerHTML = `Valor Cliente: $${resultFinal}`
+  var doc = new jsPDF()
+  for (let g = 0; g < imgconvert.length; g++) {
+    let pdfFinal = imgconvert[g]
+    doc.fromHTML(conteY, 10, 0)
+    doc.addImage(pdfFinal, 10, 1, 300, 500)
 
   }
+  doc.save('Orcamento.pdf')
+
+}
+
+
+// funcao para imprimir documento
+
+function Imprimir() {
+  let ocultarMenu = xy('.listadiv')
+  let im = xy('.btn')
+  ocultarMenu.style.opacity = '0'
+  im.style.opacity = '0'
+  window.print()
+  ocultarMenu.style.opacity = '1'
+  im.style.opacity = '1'
+}
+
+// funcao para remderizar imagens
+
+function DimencaoImg() {
+  let img = xys('.contente21 img')
+  if (img.length == 1) {
+    img.forEach((el) => {
+      let img2 = el
+      img2.style.width = '550px'
+      img2.style.height = '550px'
+      img2.style.marginTop = "130px"
+      img2.style.marginLeft = "130px"
+    })
+  }
+}
+
+//salvar valor final para o cliente
+
+function ValorCliente() {
+  let resuId = xy('.resuId')
+  let moscli = xy('.contente21')
+  let resultaMobile2 = xy('.resultaMobile')
+  let clienteFinal = xy('.clienteFinal').value;
+  let clienteFinal2 = clienteFinal.replace(/\D+/g, '');
+
+  let objeto = new Array();
+  if (JSON.parse(localStorage.getItem("objeto")) != null) {
+    localarray.push(JSON.parse(localStorage.getItem("objeto")));
+  }
+  localarray.push([clienteFinal2]);
+  let pessoaJson = JSON.stringify(localarray);
+  localStorage.setItem("objeto", pessoaJson);
+  let resultFinal = parseInt(clienteFinal2) + parseInt(calcularSoma)
+
+  moscli.insertAdjacentHTML('beforeend', `<p id="somaBruta">${[`Valor Bruto R\$ ${resultFinal}`]}</p>`);
+  resuId.innerHTML = `Valor Cliente: $${resultFinal}`
+  if  (window.matchMedia("(max-width: 700px)").matches) {
+  resultaMobile2.innerHTML = `Valor Cliente: $${resultFinal}`
+}
+}

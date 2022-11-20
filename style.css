@@ -586,8 +586,16 @@ input {
   -webkit-backdrop-filter: blur(4.5px);
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.4);
+
+
 }
 
+.resuId{
+  color: white;
+  font-size: 1.5rem;
+  font-family: var(--font-1);
+  border-radius: 10px;
+}
 
 
 
