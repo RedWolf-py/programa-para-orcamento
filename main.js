@@ -9,7 +9,8 @@ var xys = (e) => {
 }
 
 //Variaveis de img
-
+let vid = "/imgV/vidrocomun.jpg"
+let esp = "/imgV/espelho.jpg"
 let pi = "/imgV/pivoltante.jpg"
 let ba = "/imgV/bascula.jpg"
 let ja2 = "/imgV/janela2.jpg"
@@ -26,7 +27,8 @@ let dl = "/imgV/deslisante.jpg"
 let lg = "/imgV/vidros.png"
 
 //variaveis do projetos
-
+let viX = document.getElementById('vid')
+let esX = document.getElementById('esp')
 let piX = document.getElementById('piX')
 let baX = document.getElementById('baX')
 let coX = document.getElementById('coX')
@@ -272,6 +274,22 @@ function ModeloVi() {
 
   let imgDi = xy('.imgDi')
   let MdOptions = xy('.modelo2').value;
+
+  if (MdOptions == 'vidrocomun') {
+    imgDi.innerHTML = ""
+    mgb = document.createElement('img')
+    mgb.src = vid
+    imgDi.appendChild(mgb)
+    arr64.push(viX)
+  }
+
+  if (MdOptions == 'espelho') {
+    imgDi.innerHTML = ""
+    mgb = document.createElement('img')
+    mgb.src = esp
+    imgDi.appendChild(mgb)
+    arr64.push(esX)
+  }
 
   if (MdOptions == 'bascula') {
     imgDi.innerHTML = ""
